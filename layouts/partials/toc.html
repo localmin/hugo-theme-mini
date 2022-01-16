@@ -1,14 +1,10 @@
 {{ with .TableOfContents }}
   {{ if ne . "<nav id=\"TableOfContents\"></nav>" }}
     <aside class="toc">
-      <details>
-          <summary>
-              {{- i18n "toc" | default "Table of Contents" }}
-          </summary>
-          <div>
-              {{ . }}
-          </div>
-      </details>
+        <div>
+            {{- i18n "toc" | default "Table of Contents" }}
+            {{ . }}
+        </div>
     </aside>
   {{ end }}
 {{ end }}
