@@ -3,7 +3,7 @@ languageCode: en-us
 title: Hugo
 theme: hugo-theme-mini
 
-# Default content language, support en (English) / zh (Chinese) / nl (Dutch) / fr (French), default 'en'
+# Default content language, support en (English) / zh (Chinese) / nl (Dutch) / fr (French) / es (Spanish), default 'en'
 defaultContentLanguage: en
 
 # !!! exampleSite only, you may need to delete the line: `themesDir: ../../` 
@@ -12,6 +12,8 @@ themesDir: ../../
 hasCJKLanguage: true
 permalinks:
   posts: /posts/:title/
+
+paginate: 3
 
 googleAnalytics: your-google-analytics-id
 disqusShortname: your-disqus-shortname
@@ -26,6 +28,10 @@ markup:
     endLevel: 3
     ordered: false
     startLevel: 2
+  # needed to render raw HTML (e.g. <sub>, <sup>, <kbd>, <mark>)
+  goldmark:
+    renderer:
+      unsafe: true
 
 # Social links in footer, support github,twitter,stackoverflow,facebook
 social:
